@@ -36,11 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "debug_toolbar",
-    "rest_framework",
-    "drf_yasg",
+    'debug_toolbar',
+    'rest_framework',
+    'drf_yasg',
 
-    "users.apps.UsersConfig",
+    'users.apps.UsersConfig',
+    'functions.apps.FunctionsConfig',
 ]
 
 

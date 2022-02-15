@@ -12,10 +12,11 @@
 * settings.py
 ```python
 INSTALLED_APPS = [...
-    "debug_toolbar",
-    "rest_framework",
-    "drf_yasg", 
-     "users.apps.UsersConfig",
+    'debug_toolbar',
+    'rest_framework',
+    'drf_yasg',
+                  
+    'users.apps.UsersConfig',
 ...]
 MIDDLEWARE = [...
     'debug_toolbar.middleware.DebugToolbarMiddleware', ...]

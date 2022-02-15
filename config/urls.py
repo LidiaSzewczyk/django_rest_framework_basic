@@ -22,11 +22,11 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Snippets API",
+        title="Basic API",
         default_version='v1',
-        description="Test description",
+        description="Basic description",
         terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@snippets.local"),
+        contact=openapi.Contact(email="contact@basic.local"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
@@ -36,6 +36,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
+    path('v1/api/functions/', include('functions.urls')),
 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
@@ -44,5 +45,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
-
     urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))
