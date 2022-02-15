@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'functions.apps.FunctionsConfig',
+    'classes.apps.ClassesConfig',
 ]
 
 
