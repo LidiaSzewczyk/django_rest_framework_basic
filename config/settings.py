@@ -39,12 +39,13 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'rest_framework',
     'drf_yasg',
+    'dj_rest_auth',
+    'rest_framework.authtoken',
 
     'users.apps.UsersConfig',
     'functions.apps.FunctionsConfig',
     'classes.apps.ClassesConfig',
 ]
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,7 +127,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
@@ -136,4 +136,9 @@ AUTH_USER_MODEL = 'users.CustomUser'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
-    ]}
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}

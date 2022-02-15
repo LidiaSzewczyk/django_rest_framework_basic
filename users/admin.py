@@ -11,8 +11,3 @@ class CustomUserAdmin(UserAdmin):
 
 admin.site.register(models.CustomUser, CustomUserAdmin)
 
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-    ]
-}

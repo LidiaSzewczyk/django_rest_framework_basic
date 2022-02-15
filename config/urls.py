@@ -38,6 +38,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('v1/api/functions/', include('functions.urls')),
     path('v1/api/classes/', include('classes.urls')),
+    path('v1/api/dj-rest-auth/', include('dj_rest_auth.urls')),
 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
@@ -46,4 +47,5 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns.append(path('__debug__/', include(debug_toolbar.urls)))
