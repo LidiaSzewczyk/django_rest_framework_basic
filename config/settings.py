@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'classes.apps.ClassesConfig',
     'mixinclasses.apps.MixinclassesConfig',
     'genericclasses.apps.GenericclassesConfig',
+    'viewsetclasses.apps.ViewsetclassesConfig',
 ]
 
 MIDDLEWARE = [

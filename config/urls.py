@@ -40,6 +40,7 @@ urlpatterns = [
     path('v1/api/classes/', include('classes.urls')),
     path('v1/api/mixinclasses/', include('mixinclasses.urls')),
     path('v1/api/genericclasses/', include('genericclasses.urls')),
+    path('v1/api/viewsetclasses/', include('viewsetclasses.urls')),
 
     path('v1/api/dj-rest-auth/', include('dj_rest_auth.urls')),
 
