@@ -38,6 +38,9 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('v1/api/functions/', include('functions.urls')),
     path('v1/api/classes/', include('classes.urls')),
+    path('v1/api/mixinclasses/', include('mixinclasses.urls')),
+    path('v1/api/genericclasses/', include('genericclasses.urls')),
+
     path('v1/api/dj-rest-auth/', include('dj_rest_auth.urls')),
 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
